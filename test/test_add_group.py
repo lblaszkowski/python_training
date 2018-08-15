@@ -1,6 +1,9 @@
 import pytest
-from settings_ancillary import *
-from application import Application
+
+from fixture.application import Application
+from model.group import Group
+
+
 
 
 @pytest.fixture

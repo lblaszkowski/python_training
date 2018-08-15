@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 import pytest
-from settings_ancillary import *
-from fikstury_application import Fikstury_application
+
+from fixture.fikstury_application import Fikstury_application
+from model.settings_ancillary import *
 
 
 @pytest.fixture
