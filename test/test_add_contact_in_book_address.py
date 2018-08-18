@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 import pytest
-
 from fixture.fikstury_application import Fikstury_application
 from model.settings_ancillary import *
 
