@@ -1,22 +1,18 @@
 from selenium.webdriver.firefox.webdriver import WebDriver
 from selenium.webdriver.support.select import Select
+from fixture.session import SessionHelper
+
 
 class Fikstury_application:
 
     def __init__(self):
         self.wd = WebDriver(capabilities={"marionette": False})
         self.wd.implicitly_wait(60)
+        self.session = SessionHelper(self)
 
     def open_home_page(self):
         wd = self.wd
         wd.get("http://localhost/addressbook/edit.php")
-
-    def login(self, username="admin", password="secret"):
-        wd = self.wd
-        self.open_home_page()
-        wd.find_element_by_name("user").send_keys(username)
-        wd.find_element_by_name("pass").send_keys(password)
-        wd.find_element_by_xpath("//form[@id='LoginForm']/input[3]").click()
 
     def user_data(self, auxiliary_contact_settings):
         wd = self.wd
@@ -62,10 +58,6 @@ class Fikstury_application:
     def return_to_groups_page(self):
         wd = self.wd
         wd.find_element_by_xpath("//div[@id='content']/form/input[21]").click()
-
-    def logout(self):
-        wd = self.wd
-        wd.find_element_by_link_text("Logout").click()
 
     def destroy(self):
         self.wd.quit()
