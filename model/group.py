@@ -5,7 +5,7 @@ class Group:
         self.header = header
         self.footer = footer
 
-class User_basic_data:
+class User_data:
     def __init__(self, firstname, middlename, lastname, nickname):
         self.firstname = firstname
         self.middlename = middlename
@@ -13,9 +13,8 @@ class User_basic_data:
         self.nickname = nickname
 
 class User_picture:
-    def __init__(self, title_photo):
+    def __init__(self,title_photo):
         self.title_photo = title_photo
-
 
 class Data_email:
     def __init__(self,  email, email2, email3):
