@@ -1,14 +1,14 @@
 # -*- coding: utf-8 -*-
-import pytest
-from fixture.application import Application_test_add_contact_in_book_address
+# import pytest
+# from fixture.application import Application_test_add_contact_in_book_address
 from model.group import *
 
 
-@pytest.fixture
-def app(request):
-    fixture = Application_test_add_contact_in_book_address()
-    request.addfinalizer(fixture.destroy)
-    return fixture
+# @pytest.fixture
+# def app(request):
+#     fixture = Application_test_add_contact_in_book_address()
+#     request.addfinalizer(fixture.destroy)
+#     return fixture
 
 def test_add_contact_in_book_address(app):
     app.session.edit_page_settings()

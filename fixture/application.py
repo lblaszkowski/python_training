@@ -2,9 +2,7 @@ from selenium.webdriver.firefox.webdriver import WebDriver
 from fixture.session import SessionHelper
 from fixture.group import GroupHelper
 from fixture.navigation import NavigationHelper
-from fixture.manager import ManagerHelper
-
-
+from fixture.manager import ContactHelper
 
 class Application_test_add_group:
 
@@ -25,7 +23,7 @@ class  Application_test_add_contact_in_book_address:
         self.wd.implicitly_wait(60)
         self.navigation = NavigationHelper(self)
         self.session = SessionHelper(self)
-        self.manager = ManagerHelper(self)
+        self.manager = ContactHelper(self)
 
     def destroy(self):
         self.wd.quit()

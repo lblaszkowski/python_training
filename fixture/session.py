@@ -12,10 +12,10 @@ class SessionHelper:
         wd = self.app.wd
         self.app.navigation.open_home_page_edit()
 
-    def login(self, username, password):
+    def login(self, username="admin", password ="secret"):
         wd = self.app.wd
-        wd.find_element_by_name("user").send_keys("%s" % username)
-        wd.find_element_by_name("pass").send_keys("%s" % password)
+        wd.find_element_by_name("user").send_keys(username)
+        wd.find_element_by_name("pass").send_keys(password)
         wd.find_element_by_xpath("//form[@id='LoginForm']/input[3]").click()
 
     def logout(self):
