@@ -1,5 +1,5 @@
-def test_del_contact_in_book_address(app2):
-    app2.session.edit_page_settings()
-    app2.session.login(username="admin", password="secret")
-    app2.contact.del_contact_in_book_address()
-    app2.session.logout()
+def test_del_contact_in_book_address(app):
+    app.session.edit_page_settings()
+    app.session.login(username="admin", password="secret")
+    app.contact.del_contact_in_book_address()
+    app.session.logout()

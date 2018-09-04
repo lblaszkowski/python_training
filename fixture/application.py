@@ -4,7 +4,7 @@ from fixture.group import GroupHelper
 from fixture.navigation import NavigationHelper
 from fixture.contact import ContactHelper
 
-class Application_test_add_group:
+class Application:
 
     def __init__(self):
         self.wd = WebDriver(capabilities={"marionette": False})
@@ -12,17 +12,6 @@ class Application_test_add_group:
         self.navigation  = NavigationHelper(self)
         self.session = SessionHelper(self)
         self.group = GroupHelper(self)
-
-    def destroy(self):
-        self.wd.quit()
-
-class  Application_test_add_contact_in_book_address():
-
-    def __init__(self):
-        self.wd = WebDriver(capabilities={"marionette": False})
-        self.wd.implicitly_wait(60)
-        self.navigation = NavigationHelper(self)
-        self.session = SessionHelper(self)
         self.contact = ContactHelper(self)
 
     def destroy(self):
