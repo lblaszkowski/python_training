@@ -45,6 +45,7 @@ class ContactHelper:
         wd.find_element_by_link_text("home").click()
         wd.find_element_by_name('selected[]').click()
         wd.find_element_by_xpath('//*[@id="maintable"]/tbody/tr[3]/td[8]/a').click()
+        wd.find_element_by_name("firstname").clear()
         wd.find_element_by_name("firstname").send_keys(contact.firstname)
         wd.find_element_by_name("lastname").send_keys(contact.lastname)
         wd.find_element_by_name("nickname").send_keys(contact.nickname)
