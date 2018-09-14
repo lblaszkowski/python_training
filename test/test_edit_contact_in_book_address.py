@@ -2,7 +2,6 @@ from model.contact import Contact
 
 def test_edit_contact_in_book_address(app):
     app.session.edit_page_settings()
-    app.session.login(username="admin", password="secret")
     app.contact.edit_contact_in_book_address(
         Contact(firstname="Justyna", middlename="", lastname="Nowik", nickname="JNowik",
                 title_photo="zwierzęta", company="", address="Warszawa", home="Polska", mobile="99999999999",
@@ -11,4 +10,3 @@ def test_edit_contact_in_book_address(app):
                 aday="26", amonth="October", ayear="2014", address2="", phone2="", notes="")
         )
     app.contact.return_to_groups_page()
-    app.session.logout()
