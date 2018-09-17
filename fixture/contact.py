@@ -70,7 +70,7 @@ class ContactHelper:
         wd = self.app.wd
         wd.find_element_by_link_text("home page").click()
 
-    def count_checkbox(self):
+    def count(self):
         wd = self.app.wd
         self.fill_all_user_data()
         return len(wd.find_elements_by_name("selected[]"))
